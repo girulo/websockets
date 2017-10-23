@@ -56,7 +56,7 @@ public final class Challenge {
 
         AtmosphereRequest atmosphereRequest = atmosphereResource.getRequest();
 
-        String headerValue = atmosphereRequest.getHeader("Authentication");
+        String headerValue = atmosphereRequest.getHeader(HEADER);
         if (headerValue != null) {
             String headerSenderId = headerValue.split(" ")[1];
             if (headerSenderId.equals(message.getSenderId().toString())) {
